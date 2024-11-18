@@ -131,7 +131,31 @@ main {
 .person .details-btn:hover {
     background-color: #2b7aaf;
 }
+.search_warper{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    gap: 10px;
+}
+.search{
+    border: none;
+    border-radius: 10px;
+    min-width: 200px;
+    height: 100%;
+    padding: 10px;
+    width: 80%;
+    margin-left: 20px;
+}
+.search-btn{
+    width:35px;
+    height: 35px;
+    border: none;
+    border-radius: 50%;
+    margin-left:20px ;
+    background-image: url("./images/search.png");
+    background-size: contain;
 
+}
 
 
 
@@ -149,6 +173,10 @@ main {
     header .index-btn p {
         font-size: 20px;
     }
+    .search{
+        width: 150px;
+    }
+    
     
 }
 
@@ -172,5 +200,8 @@ main {
 
     .person {
         width: 100%;
+    }
+    .search{
+        width: 100px;
     }
 }

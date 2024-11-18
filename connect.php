@@ -1,5 +1,5 @@
 <?php
-$host = 'localhost'; // Адрес сервера
+$host = 'c9128423.beget.tech'; // Адрес сервера
 $user = 'c9128423_story';      // Имя пользователя
 $password = 'epitih34!';      // Пароль
 $dbname = 'c9128423_story'; // Имя базы данных

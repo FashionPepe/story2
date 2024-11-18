@@ -76,6 +76,7 @@ function getPersonDetails($mysqli, $personId) {
     while ($spouse = $spousesResult->fetch_assoc()) {
         displayPersonBrief($spouse);
     }
+    echo "</div>";
     // Получаем супругов
     $spousesResult = $mysqli->query("SELECT h.* FROM relationships r JOIN humans h ON (h.id = r.person1_id AND r.person2_id = $personId) OR (h.id = r.person2_id AND r.person1_id = $personId) WHERE r.relationship_type = 'spouse';");
     echo "<h3>Супруги:</h3>";
@@ -127,6 +128,12 @@ function displayPersonBrief($person) {
         <a class="index-btn" href="index.php">
             <p>Родословное дерево</p>
         </a>
+        <form method="get" action="search.php" class="search_warper">
+            <input type="text" name="search" id="search" class="search">
+            
+            <button type="submit" class="search-btn"></button>
+</form>
+        
         <?php if (!isset($_SESSION['loggedin'])) { ?>
             <a href="login.php" class="login-btn">Авторизация редактора</a>
         <?php } else { ?>
