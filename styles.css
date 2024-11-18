@@ -1,0 +1,128 @@
+/* Основные стили */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Шапка */
+header {
+    background-color: #3498db;
+    color: white;
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    box-sizing: border-box;
+}
+
+header p {
+    font-weight: 700;
+    font-size: 1.5rem; /* Изменено на относительный размер */
+    margin: 0;
+}
+
+header a {
+    display: inline-block;
+    width: auto; /* Изменено для адаптивности */
+    background: #2b7aaf;
+    padding: 14px;
+    text-align: center;
+    border-radius: 6px;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    margin-right: 20px;
+}
+
+header a:hover {
+    background-color: #1c567c;
+}
+
+/* Подвал */
+footer {
+    background-color: #3498db;
+    color: white;
+    text-align: center;
+    padding: 20px 30px;
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
+    margin-top: auto; 
+}
+
+/* Основные контейнеры для древа */
+.tree-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px; 
+}
+
+/* Адаптивные стили для мобильных устройств */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column; 
+        text-align: center; 
+        padding: 15px; 
+    }
+
+    header p {
+        font-size: 1.8rem; /* Увеличенный размер шрифта для мобильных */
+        margin-bottom: 10px; 
+    }
+
+    header a {
+        width: auto; 
+        margin-top: 10px; 
+        padding-left: 20px; 
+        padding-right: 20px; 
+        font-size: 1rem; /* Размер шрифта для мобильных */
+        margin-bottom: 10px; 
+        transition-duration :0.5s ; /* Плавный переход при изменении */
+        
+   }
+
+   .generation { 
+       flex-direction : column ; /* Вертикальная ориентация на мобильных */
+       align-items : center ;
+   }
+
+   .couple { 
+       flex-direction : column ; /* Вертикальная ориентация на мобильных */
+   }
+
+   .person { 
+       max-width : none ; /* Убираем ограничение по ширине на мобильных */
+       width : auto ; /* Автоматическая ширина для мобильных */
+   }
+
+   .photo { 
+       width : auto ; /* Автоматическая ширина для изображений на мобильных */
+       height : auto ; /* Автоматическая высота для изображений на мобильных */
+   }
+}
+
+/* Дополнительные стили для адаптации форм на мобильных устройствах */
+@media (max-width : 480px) {
+   .edit-form, .add-relationship-form { 
+       padding : 10px ; /* Меньшие отступы для компактности */
+   }
+
+   .btn-save, .create-btn, .logout-btn, .delete-btn { 
+       font-size : 14px ; /* Уменьшенный шрифт для кнопок на маленьких экранах */
+       padding : 10px ; /* Компактные отступы */ 
+   }
+   
+   h2, h3 { 
+       font-size : 16px ; /* Уменьшенный шрифт заголовков на маленьких экранах */ 
+   }
+}
